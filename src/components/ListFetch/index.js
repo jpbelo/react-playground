@@ -22,7 +22,7 @@ class ListFetch extends React.Component {
   render() {
     return (
       <Fragment>
-        <h2>List Fetch</h2>
+        <h1>List Fetch</h1>
         <List
           people={this.state.people}
           isLoading={this.state.isLoading}
