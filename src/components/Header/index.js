@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Navigation = styled.div`
-  width: 100%;
+  width: 180px;
   font-size: 16px;
-  margin-bottom: 40px;
   & > ul {
-    display: flex;
-    justify-content: space-between;
+    background-color: #fdfdfd;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1), 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    height: calc(100vh - 250px);
+  	position: fixed;
+    display: block;
     & > li {
       & > a {
         padding: 10px;
         display: inline-block;
+        color: black; 
       }
     }
   }
