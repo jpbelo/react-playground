@@ -50,7 +50,7 @@ class StyledComponents extends Component {
         <StyledButton
           onClick={this.changeTitleColor}
         >
-          Styled Button
+          Change colors
         </StyledButton>
         <Card
          passState={this.state}
