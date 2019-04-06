@@ -6,9 +6,9 @@ const Navigation = styled.div`
   width: 180px;
   font-size: 16px;
   & > ul {
-    background-color: #fdfdfd;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1), 0 0 5px 5px rgba(0, 0, 0, 0.2);
-    height: calc(100vh - 250px);
+    background-color: #f2f2f2;
+    box-shadow: 0 0 0 0 #fff, 0 0 5px 5px #f2f2f2;
+    height: calc(100vh - 220px);
   	position: fixed;
     display: block;
     & > li {
