@@ -14,7 +14,7 @@ const Card = styled.div`
 
   h4 {
   	font-size: 20px;
-  	color: grey;
+  	color: ${props => props.passState.titleColor};
   }
   p {
   	font-size: 14px;
@@ -22,12 +22,35 @@ const Card = styled.div`
 `
 
 class StyledComponents extends Component {
+
+  state = {
+    titleColor: 'grey',
+  }
+
+  changeTitleColor = () => {
+  	if(window.confirm('you sure?')){
+      const rgbR = Math.floor(Math.random() * 255)
+      const rgbG = Math.floor(Math.random() * 255)
+      const rgbB = Math.floor(Math.random() * 255)
+      const newColor = `rgb( ${rgbR}, ${rgbG}, ${rgbB} )`
+      this.setState({
+      	titleColor: newColor
+      })
+  	}
+  }
+
   render() {
     return (
       <Fragment>
         <h1>Styled Components</h1>
-        <StyledButton>Styled Button</StyledButton>
-        <Card>
+        <StyledButton
+          onClick={this.changeTitleColor}
+        >
+          Styled Button
+        </StyledButton>
+        <Card
+         passState={this.state}
+        >
           <h4>Title</h4>
           <p>Description text</p>
         </Card>

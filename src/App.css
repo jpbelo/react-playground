@@ -1,8 +1,8 @@
 .switch-wrapper {
-	position: relative;
+  position: relative;
 }
 .switch-wrapper > div {
-	position: absolute;
+  position: absolute;
 }
 
 /*
