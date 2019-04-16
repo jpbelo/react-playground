@@ -4,10 +4,9 @@ import { AnimatedSwitch } from 'react-router-transition'
 
 import Layout from './components/Layout'
 import Header from './components/Header'
-import Home from './components/Home'
-import ListFetch from './components/ListFetch'
-import LodashExemples from './components/LodashExemples'
-import StyledComponents from './components/StyledComponents'
+import HomePage from './pages/Home'
+import AboutPage from './pages/About'
+
 import './App.css'
 
 const styleAtEnter = {
@@ -32,10 +31,8 @@ class App extends Component {
             atActive={styleAtActive}
             className="switch-wrapper"
           >
-            <Route path="/" exact component={Home} />
-            <Route path="/list-fetch" component={ListFetch} />
-            <Route path="/lodash-exemples" component={LodashExemples} />
-            <Route path="/styled-components" component={StyledComponents} />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={AboutPage} />
           </AnimatedSwitch>
         </Layout>
       </Router>

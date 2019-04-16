@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-class Home extends Component {
+class HomePage extends Component {
   render() {
     return (
       <Fragment>
@@ -11,4 +11,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default HomePage

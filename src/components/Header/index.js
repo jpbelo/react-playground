@@ -31,13 +31,7 @@ class Header extends Component {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/list-fetch">List Fetch</Link>
-            </li>
-            <li>
-              <Link to="/lodash-exemples">Lodash</Link>
-            </li>
-            <li>
-              <Link to="/styled-components">Styled Components</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
         </Navigation>
