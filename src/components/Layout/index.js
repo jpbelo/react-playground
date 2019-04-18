@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: space-between;
   &>div {
   	border: 1px dashed #ccc;
-  	width: calc(100% - 200px);
+  	width: calc(100% - 150px);
   	overflow: scroll;-
   }
 `
