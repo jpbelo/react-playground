@@ -5,9 +5,15 @@ import { UID } from 'react-uid'
 import Label from './Label'
 
 const StyledTextInput = styled.input`
-  border-radius: 6px;
   padding: 10px;
-  background-color: green;
+  border-radius: 6px;
+  border-color: ${props => props.theme.colors.primary.dark};
+  color: ${props => props.theme.colors.primary.dark};
+  background-color: ${props => props.theme.colors.primary.bgAlt};
+  :focus {
+    color: ${props => props.theme.colors.grey.main};
+    background-color: ${props => props.theme.colors.primary.bg};
+  }
 `
 
 class TextInput extends Component {

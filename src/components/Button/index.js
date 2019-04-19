@@ -5,10 +5,10 @@ const StyledButton = styled.button`
   border-radius: 6px;
   border-width: 1px;
   padding: 10px;
-  color: ${props => props.theme.grey.primary};
-  background-color: ${props => props.theme.green.primary};
+  color: ${props => props.theme.colors.grey.main};
+  background-color: ${props => props.theme.colors.primary.bg};
   :hover {
-    background-color: ${props => props.theme.green.secondary};
+    background-color: ${props => props.theme.colors.primary.bgAlt};
   }
 
   ${props => props.disabled && css`
@@ -16,9 +16,9 @@ const StyledButton = styled.button`
   `}
 
   ${props => props.secondary && css`
-    background-color: ${props => props.theme.blue.primary};
+    background-color: ${props => props.theme.colors.secondary.bg};
     :hover {
-      background-color: ${props => props.theme.blue.secondary};
+      background-color: ${props => props.theme.colors.secondary.bgAlt};
     }
   `}
 

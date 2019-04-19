@@ -3,11 +3,12 @@ import styled, { css } from 'styled-components'
 
 const CardContainer = styled.div`
   border-radius: 6px;
-  background-color: #ccc;
   padding: 10px;
+  color: ${props => props.theme.colors.grey.main};
+  background-color: ${props => props.theme.colors.primary.bg};
 
   ${props => props.secondary && css`
-    background-color: red;
+    background-color: ${props => props.theme.colors.secondary.bg};
   `}
 
   h2 {
