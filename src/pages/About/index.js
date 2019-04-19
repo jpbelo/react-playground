@@ -8,14 +8,13 @@ class AboutPage extends Component {
       <Fragment>
         <h1>About!</h1>
         <Button>
-          PTIU
+          PIM
         </Button>
-        <Button
-          options={{
-          	type:'secondary',
-          }}
-         >
-           POW
+        <Button secondary>
+           PAM
+         </Button>
+        <Button disabled>
+           PUM
          </Button>
       </Fragment>
     )

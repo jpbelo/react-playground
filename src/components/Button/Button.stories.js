@@ -9,11 +9,7 @@ storiesOf('Components|Button', module)
   </Button>
 ))
 .add('Secondary', () => (
-  <Button
-    options={{
-      type: 'secondary',
-    }}
-  >
+  <Button secondary>
     👾 Secondary Button 🦄
   </Button>
 ))
