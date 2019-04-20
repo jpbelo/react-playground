@@ -5,7 +5,7 @@ import Icon from '.'
 storiesOf('Components|Icons', module)
 .add('Primary', () => (
   <Fragment>
-    <Icon name="user" color="#fff111" />
-    <Icon name="alert" />
+    <Icon name="user" size="10" primary />
+    <Icon name="alert" size="20" />
   </Fragment>
 ))

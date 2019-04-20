@@ -1,18 +1,13 @@
 import React, { Component, Fragment } from 'react'
-import styled, { css } from 'styled-components'
+import styled, { withTheme, css } from 'styled-components'
 
-import UserIcon from './icons/User'
-import AlertIcon from './icons/Alert'
-
-const icons = {
-  user: UserIcon,
-  alert: AlertIcon,
-}
+import icons from './icons'
 
 const IconContainer = styled.div`
   display: block;
-  width: 100px;
-  height: 100px;
+  width: ${props => props.theme.sizeX * props.size}px;
+  height: ${props => props.theme.sizeX * props.size}px;
+
   ${props => props.color && css`
     path, polygon, rect {
       fill: ${props => props.color};
@@ -27,12 +22,26 @@ const IconContainer = styled.div`
 class Icon extends Component {
   render() {
     const SpecificIcon = icons[this.props.name]
+    let iconColor
+    if( this.props.primary ){
+      iconColor = this.props.theme.colors.primary.main
+    } else if( this.props.secondary ){
+      iconColor = this.props.theme.colors.secondary.main
+    } else {
+      iconColor = this.props.theme.colors.grey.main
+    }
+
+    let iconSize = 2
+    if( this.props.size ){
+      iconSize = this.props.size
+    }
+
     return (
-      <IconContainer {...this.props}>
+      <IconContainer color={iconColor} size={iconSize}>
         <SpecificIcon />
       </IconContainer>
     )
   }
 }
 
-export default Icon
+export default withTheme(Icon)

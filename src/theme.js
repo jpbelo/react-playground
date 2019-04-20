@@ -1,5 +1,6 @@
 const theme = {
   name: 'default',
+  sizeX: 8,
   colors: {
     primary: {
       main: 'hsl(80,100%,50%)',
