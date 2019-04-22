@@ -34,6 +34,12 @@ class Header extends Component {
             <li>
               <Link to="/about">About</Link>
             </li>
+            <li>
+              <Link to="/load-stuff">Load Stuff</Link>
+            </li>
+            <li>
+              <Link to="/registration">Registration</Link>
+            </li>
           </ul>
         </Navigation>
       </header>

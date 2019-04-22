@@ -18,16 +18,17 @@ const StyledTextInput = styled.input`
 
 class TextInput extends Component {
   render() {
+  	const { inputProps } = this.props
     return (
       <UID>
         {id => (
           <Fragment>
-            {this.props.inputProps && this.props.inputProps.label && (
+            {inputProps && inputProps.label && (
               <Label for={id}>
-                {this.props.inputProps.label}
+                {inputProps.label}
               </Label>
             )}
-            <StyledTextInput id={id} />
+            <StyledTextInput name={inputProps.name} id={id} />
           </Fragment>
         )}
       </UID>

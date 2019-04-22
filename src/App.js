@@ -7,6 +7,8 @@ import Layout from './components/Layout'
 import Header from './components/Header'
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
+import LoadStuffPage from './pages/LoadStuff'
+import RegistrationPage from './pages/Registration'
 
 import theme from './theme'
 import './App.css'
@@ -36,6 +38,8 @@ class App extends Component {
             >
               <Route path="/" exact component={HomePage} />
               <Route path="/about" component={AboutPage} />
+              <Route path="/load-stuff" component={LoadStuffPage} />
+              <Route path="/registration" component={RegistrationPage} />
             </AnimatedSwitch>
           </Layout>
         </ThemeProvider>
