@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { AnimatedSwitch } from 'react-router-transition'
 import { ThemeProvider } from 'styled-components'
+import { Provider } from "react-redux"
+import store from "./store"
+// import showResults from "./showResults"
 
 import Layout from './components/Layout'
 import Header from './components/Header'
@@ -26,24 +29,26 @@ const styleAtActive = {
 class App extends Component {
   render() {
     return (
-      <Router>
-        <ThemeProvider theme={theme}>
-          <Layout>
-            <Header />
-            <AnimatedSwitch
-              atEnter={styleAtEnter}
-              atLeave={styleAtLeave}
-              atActive={styleAtActive}
-              className="switch-wrapper"
-            >
-              <Route path="/" exact component={HomePage} />
-              <Route path="/about" component={AboutPage} />
-              <Route path="/load-stuff" component={LoadStuffPage} />
-              <Route path="/registration" component={RegistrationPage} />
-            </AnimatedSwitch>
-          </Layout>
-        </ThemeProvider>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <ThemeProvider theme={theme}>
+            <Layout>
+              <Header />
+              <AnimatedSwitch
+                atEnter={styleAtEnter}
+                atLeave={styleAtLeave}
+                atActive={styleAtActive}
+                className="switch-wrapper"
+              >
+                <Route path="/" exact component={HomePage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/load-stuff" component={LoadStuffPage} />
+                <Route path="/registration" component={RegistrationPage} />
+              </AnimatedSwitch>
+            </Layout>
+          </ThemeProvider>
+        </Router>
+      </Provider>
     )
   }
 }
