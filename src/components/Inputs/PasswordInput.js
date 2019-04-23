@@ -4,7 +4,7 @@ import { UID } from 'react-uid'
 
 import Label from './Label'
 
-const StyledTextInput = styled.input`
+const StyledPasswordInput = styled.input`
   padding: 10px;
   border-radius: 6px;
   border-color: ${props => props.theme.colors.primary.dark};
@@ -16,7 +16,7 @@ const StyledTextInput = styled.input`
   }
 `
 
-const TextInput = (field) => (
+const PasswordInput = (field) => (
   <UID>
     {id => (
       <Fragment>
@@ -25,10 +25,10 @@ const TextInput = (field) => (
             {field.label}
           </Label>
         )}
-        <StyledTextInput
+        <StyledPasswordInput
           {...field.input}
           id={id}
-          type="text"
+          type="password"
           placeholder={field.placeholder && field.placeholder}
         />
         {field.meta.touched && field.meta.error &&
@@ -38,4 +38,4 @@ const TextInput = (field) => (
   </UID>
 )
 
-export default TextInput
+export default PasswordInput

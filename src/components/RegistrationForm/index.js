@@ -2,43 +2,38 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import styled from 'styled-components'
 
-import { SubmitInput, TextInput } from '../Inputs'
+import { SubmitInput, TextInput, PasswordInput } from '../Inputs'
 
 const StyledForm = styled.form`
-  border: 1px solid black;
+  background-color: #ddd;
 `
 
 const RegistrationForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = this.props
+  const { handleSubmit, pristine, reset, submitting } = props
   return (
     <StyledForm onSubmit={handleSubmit}>
       <Field
         name="firstName"
-        component="input"
-        type="text"
+        component={TextInput}
+        label="First Name"
         placeholder="First Name"
       />
-      <TextInput
-        inputProps={{
-          label: 'Name',
-          name: 'name',
-        }}
+      <Field
+        name="lastName"
+        component={TextInput}
+        label="Last Name"
+        placeholder="Last Name"
       />
-      <TextInput
-        inputProps={{
-          label: 'E-mail',
-          name: 'email',
-          validation: 'email',
-          required: true,
-        }}
+      <Field
+        name="email"
+        component={TextInput}
+        label="E-mail"
+        placeholder="mail@exemple.com"
       />
-      <TextInput
-        inputProps={{
-          label: 'Password',
-          name: 'password',
-          validation: 'password',
-          required: true,
-        }}
+      <Field
+        name="password"
+        component={PasswordInput}
+        label="Password"
       />
       <br/><br/>
       <SubmitInput />
