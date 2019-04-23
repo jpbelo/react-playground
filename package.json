@@ -10,6 +10,8 @@
     "react-router-transition": "^1.3.0",
     "react-scripts": "2.1.8",
     "react-uid": "^2.2.0",
+    "redux": "^4.0.1",
+    "redux-form": "^8.2.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {

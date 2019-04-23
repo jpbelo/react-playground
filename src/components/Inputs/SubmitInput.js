@@ -1,7 +1,5 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
-
-import Label from './Label'
 
 const StyledSubmitInput = styled.input`
   padding: 10px;
@@ -13,7 +11,6 @@ const StyledSubmitInput = styled.input`
 
 class SubmitInput extends Component {
   render() {
-  	const { inputProps } = this.props
     return (
       <StyledSubmitInput type="submit" />
     )

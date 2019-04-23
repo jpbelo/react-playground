@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react'
-import styled, { css } from 'styled-components'
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
-import { SubmitInput, TextInput, SelectInput } from '../Inputs'
+import { SubmitInput, TextInput } from '../Inputs'
 
 const StyledForm = styled.form`
   border: 1px solid black;
