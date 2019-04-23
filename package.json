@@ -34,7 +34,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.4.3",
-    "@storybook/react": "^5.0.9",
+    "@storybook/react": "^5.0.10",
     "babel-loader": "^8.0.5",
     "storybook-addon-styled-component-theme": "^1.2.1"
   }
