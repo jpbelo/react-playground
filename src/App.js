@@ -4,7 +4,6 @@ import { AnimatedSwitch } from 'react-router-transition'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from "react-redux"
 import store from "./store"
-// import showResults from "./showResults"
 
 import Layout from './components/Layout'
 import Header from './components/Header'
@@ -12,6 +11,7 @@ import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import LoadStuffPage from './pages/LoadStuff'
 import RegistrationPage from './pages/Registration'
+import ReduxLog from "./components/ReduxLog"
 
 import theme from './theme'
 import './App.css'
@@ -30,6 +30,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
+        <ReduxLog />
         <Router>
           <ThemeProvider theme={theme}>
             <Layout>
