@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styled, { withTheme, css } from 'styled-components'
 
 import icons from './icons'

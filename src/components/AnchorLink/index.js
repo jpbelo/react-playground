@@ -1,24 +1,31 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { width } from 'styled-system'
 
-import { buttonStyles } from '../Button'
+import { StyledButton } from '../Button'
 
-const StyledAnchorLink = styled(Link)(props => (
-  props.showAsButton ? {
-    ...buttonStyles(props.theme)
-  }:{
-    backgroundColor: 'red',
-  }
-))
+const StyledAnchorLink = styled(Link)`
+  ${width};
+  text-decoration: underline;
+  color: ${props => props.secondary ? props.theme.colors.secondary.dark : props.theme.colors.primary.dark};
+`
 
 class AnchorLink extends Component {
   render() {
-    return (
-      <StyledAnchorLink {...this.props} >
-        {this.props.children}
-      </StyledAnchorLink>
-    )
+    if( this.props.showAsButton ){
+      return (
+        <StyledButton {...this.props} as={Link} >
+          {this.props.children}
+        </StyledButton>
+      )
+    } else {
+      return (
+        <StyledAnchorLink {...this.props} >
+          {this.props.children}
+        </StyledAnchorLink>
+      )
+    }
   }
 }
 

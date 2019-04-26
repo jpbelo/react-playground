@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -7,20 +7,21 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   &>div {
-  	border: 1px dashed #ccc;
-  	width: calc(100% - 150px);
-  	overflow: scroll;-
+    border: 1px dashed #ccc;
+    width: calc(100% - 150px);
+    overflow: scroll;
+    &>div {
+      width: 100%;
+    }
   }
 `
 
 class Layout extends Component {
   render() {
     return (
-      <Fragment>
-        <Container>
-          {this.props.children}
-        </Container>
-      </Fragment>
+      <Container>
+        {this.props.children}
+      </Container>
     )
   }
 }

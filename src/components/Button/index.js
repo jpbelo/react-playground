@@ -1,34 +1,27 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import { width, color, space } from 'styled-system'
 
-export const buttonStyles = theme => ({
-  borderRadius: '6px',
-  border: `1px solid ${theme.colors.grey.main}`,
-  padding: '10px',
-  color: theme.colors.grey.main,
-  backgroundColor: theme.colors.primary.bg,
-})
-
-/*
-  :hover {
-    backgroundColor: ${props => props.theme.colors.primary.bgAlt};
-  }
-
-   ${props => props.disabled && css`
-    filter: saturate(.1);
+export const StyledButton = styled.button`
+  ${width};
+  ${color};
+  ${space};
+  display: block;
+  border-radius: 6px;
+  border: 1px solid ${props => props.secondary ? props.theme.colors.secondary.main : props.theme.colors.primary.main};
+  padding: 10px;
+  color: ${props => !props.color && props.theme.colors.grey.main};
+  background-color: ${props => props.secondary ? props.theme.colors.secondary.bg : props.theme.colors.primary.bg};
+  ${props => !props.disabled && css`
+  &:hover {
+    background-color: ${props => props.secondary ? props.theme.colors.secondary.bgAlt : props.theme.colors.primary.bgAlt};
+  },
   `}
-
-  ${props => props.secondary && css`
-    background-color: ${props => props.theme.colors.secondary.bg};
-    :hover {
-      background-color: ${props => props.theme.colors.secondary.bgAlt};
-    }
+  ${props => props.disabled && css`
+  background-color: ${props => props.theme.colors.grey.light};
+  border-color: ${props => props.theme.colors.grey.main};
   `}
-*/
-
-const StyledButton = styled.button(props => ({
-  ...buttonStyles(props.theme),
-}))
+`
 
 class Button extends Component {
   render() {

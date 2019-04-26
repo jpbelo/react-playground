@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import { width } from 'styled-system'
 
 const CardContainer = styled.div`
+  ${width};
   border-radius: 6px;
   padding: 10px;
   color: ${props => props.theme.colors.grey.main};
@@ -15,7 +17,7 @@ const CardContainer = styled.div`
     margin: 0 0 6px;
   }
   p {
-  	margin: 0;
+    margin: 0;
   }
 `
 

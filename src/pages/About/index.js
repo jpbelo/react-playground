@@ -7,15 +7,15 @@ class AboutPage extends Component {
     return (
       <Fragment>
         <h1>About!</h1>
-        <Button>
-          PIM
+        <Button width={200}>
+          Button
         </Button>
         <Button secondary>
-           PAM
-         </Button>
+          Secondary Button
+        </Button>
         <Button disabled>
-           PUM
-         </Button>
+          Disabled Button
+        </Button>
       </Fragment>
     )
   }
