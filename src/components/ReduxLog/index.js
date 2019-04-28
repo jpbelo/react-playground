@@ -21,7 +21,8 @@ class ReduxLog extends Component {
   render() {
     return (
       <StyledReduxLog>
-        <pre>{JSON.stringify(this.props.form, undefined, 2)}</pre>
+        <h3>Redux state:</h3>
+        <pre>{JSON.stringify(this.props.reduxState, undefined, 2)}</pre>
       </StyledReduxLog>
     )
   }
@@ -29,7 +30,7 @@ class ReduxLog extends Component {
 
 const mapStateToProps = function(state){
   return {
-    form: state.form.registration
+    reduxState: state
   }
 }
 

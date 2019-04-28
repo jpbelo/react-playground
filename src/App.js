@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { AnimatedSwitch } from 'react-router-transition'
 import { ThemeProvider } from 'styled-components'
 import { Provider } from "react-redux"
-import store from "./store"
 
+import store from "./store"
+import ReduxLog from "./components/ReduxLog"
 import Layout from './components/Layout'
 import Header from './components/Header'
 import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import LoadStuffPage from './pages/LoadStuff'
 import RegistrationPage from './pages/Registration'
-import ReduxLog from "./components/ReduxLog"
+import LoginPage from './pages/Login'
 
 import theme from './theme'
 import './App.css'
@@ -45,6 +46,7 @@ class App extends Component {
                 <Route path="/about" component={AboutPage} />
                 <Route path="/load-stuff" component={LoadStuffPage} />
                 <Route path="/registration" component={RegistrationPage} />
+                <Route path="/login" component={LoginPage} />
               </AnimatedSwitch>
             </Layout>
           </ThemeProvider>

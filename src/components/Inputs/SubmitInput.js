@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 
-const StyledSubmitInput = styled.input`
-  padding: 10px;
-  border-radius: 6px;
-  border-color: ${props => props.theme.colors.primary.dark};
-  color: ${props => props.theme.colors.primary.dark};
-  background-color: ${props => props.theme.colors.primary.bgAlt};
-`
+import { StyledButton } from '../Button'
 
 class SubmitInput extends Component {
   render() {
     return (
-      <StyledSubmitInput type="submit" />
+      <StyledButton as="button" {...this.props}>
+        {this.props.children}
+      </StyledButton>
     )
   }
 }

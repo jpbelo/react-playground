@@ -2,16 +2,22 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import styled from 'styled-components'
 
-import { SubmitInput, TextInput, PasswordInput } from '../Inputs'
+import { SubmitInput, TextInput, PasswordInput } from '../../Inputs'
 
 const StyledForm = styled.form`
   background-color: #ddd;
 `
 
 const RegistrationForm = props => {
-  const { handleSubmit, pristine, reset, submitting } = props
+  const { error, handleSubmit, pristine, reset, submitting } = props
   return (
     <StyledForm onSubmit={handleSubmit}>
+      <Field
+        name="username"
+        component={TextInput}
+        label="Username"
+        placeholder="my_user_name"
+      />
       <Field
         name="firstName"
         component={TextInput}
@@ -36,11 +42,18 @@ const RegistrationForm = props => {
         label="Password"
       />
       <br/><br/>
-      <SubmitInput />
+        {error && <strong>{error}</strong>}
+      <br/><br/>
+      <SubmitInput disabled={pristine || submitting} type="submit">
+        Send
+      </SubmitInput>
+      <SubmitInput disabled={pristine || submitting} onClick={reset}>
+        Clear
+      </SubmitInput>
     </StyledForm>
   )
 }
 
 export default reduxForm({
-	form: 'registration'
+	form: 'registrationForm'
 })(RegistrationForm)

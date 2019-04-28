@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import RegistrationForm from '../../components/RegistrationForm'
+import { RegistrationForm } from '../../components/AccountForms'
 
 class RegistrationPage extends Component {
   render() {

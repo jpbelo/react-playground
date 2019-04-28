@@ -16,23 +16,23 @@ const StyledTextInput = styled.input`
   }
 `
 
-const TextInput = (field) => (
+const TextInput = ({ placeholder, input, label, type, meta: { touched, error } }) => (
   <UID>
     {id => (
       <Fragment>
-        {field.label && (
+        {label && (
           <Label htmlFor={id}>
-            {field.label}
+            {label}
           </Label>
         )}
         <StyledTextInput
-          {...field.input}
+          {...input}
           id={id}
           type="text"
-          placeholder={field.placeholder && field.placeholder}
+          placeholder={placeholder && placeholder}
         />
-        {field.meta.touched && field.meta.error &&
-        <span className="error">{field.meta.error}</span>}
+        {touched && error &&
+        <span className="error">{error}</span>}
       </Fragment>
     )}
   </UID>
