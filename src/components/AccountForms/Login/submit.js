@@ -1,5 +1,8 @@
 import { SubmissionError } from 'redux-form'
 
+import store from "../../../store"
+import { login_user } from '../../../actions'
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 function submit(values) {
@@ -16,7 +19,7 @@ function submit(values) {
         _error: 'Login failed!'
       })
     } else {
-      window.alert(`Success:\n\n${JSON.stringify(values, null, 2)}`)
+      store.dispatch(login_user(values.username))
     }
   })
 }

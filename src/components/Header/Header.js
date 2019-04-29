@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import logo from '../../assets/images/logo.svg'
+import { AccountLinks } from '../AccountForms'
 
 const Navigation = styled.div`
   background-color: #f2f2f2;
@@ -47,10 +48,8 @@ class Header extends Component {
             <li>
               <Link to="/registration">Registration</Link>
             </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
           </ul>
+          <AccountLinks />
         </Navigation>
       </header>
     )
