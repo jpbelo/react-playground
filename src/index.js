@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <GoogleReCaptchaProvider reCaptchaKey="[6LfB0KAUAAAAAFzxM6mBG_Gu7LayUgT1wSK3PO2B]">
+    <App />
+  </GoogleReCaptchaProvider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

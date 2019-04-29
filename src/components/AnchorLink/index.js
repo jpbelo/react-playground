@@ -13,15 +13,18 @@ const StyledAnchorLink = styled(Link)`
 
 class AnchorLink extends Component {
   render() {
+    const passProps = {}
+    passProps.to = this.props.to
+
     if( this.props.showAsButton ){
       return (
-        <StyledButton {...this.props} as={Link} >
+        <StyledButton {...passProps} as={Link} >
           {this.props.children}
         </StyledButton>
       )
     } else {
       return (
-        <StyledAnchorLink {...this.props} >
+        <StyledAnchorLink {...passProps} >
           {this.props.children}
         </StyledAnchorLink>
       )
