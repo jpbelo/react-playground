@@ -3,6 +3,7 @@ import { Field, reduxForm } from 'redux-form'
 import styled from 'styled-components'
 
 import { SubmitInput, TextInput, PasswordInput } from '../../Inputs'
+import Recaptcha from '../../Recaptcha'
 
 import submit from './submit'
 
@@ -36,6 +37,7 @@ const LoginForm = props => {
       </SubmitInput>
       <br/>
       <p>username: dev<br/>password: reduxform</p>
+      <Recaptcha/>
     </StyledForm>
   )
 }
