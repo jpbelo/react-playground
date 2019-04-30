@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 
-import Button from '../../components/Button'
 import ListFetch from '../../components/ListFetch'
 
 class LoadStuffPage extends Component {
@@ -8,9 +7,6 @@ class LoadStuffPage extends Component {
     return (
       <Fragment>
         <h1>Load Stuff!</h1>
-        <Button>
-          PIM
-        </Button>
         <ListFetch />
       </Fragment>
     )

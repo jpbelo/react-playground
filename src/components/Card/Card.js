@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import { width } from 'styled-system'
 
+import { H1, P } from '../Text'
+
 const CardContainer = styled.div`
   ${width};
   border-radius: 6px;
@@ -12,21 +14,14 @@ const CardContainer = styled.div`
   ${props => props.secondary && css`
     background-color: ${props => props.theme.colors.secondary.bg};
   `}
-
-  h2 {
-    margin: 0 0 6px;
-  }
-  p {
-    margin: 0;
-  }
 `
 
 class Card extends Component {
   render() {
     return (
       <CardContainer {...this.props}>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
+        <H1>{this.props.title}</H1>
+        <P>{this.props.description}</P>
       </CardContainer>
     )
   }
