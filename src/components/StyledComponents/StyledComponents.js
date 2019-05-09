@@ -14,31 +14,32 @@ const Card = styled.div`
 
   h4 {
     font-size: 20px;
-    color: ${props => props.passState.titleColor};
+    color: ${(props) => props.passState.titleColor};
   }
   p {
     font-size: 14px;
   }
-  
-  ${props => props.alternativeUI && css`
-    background-color: #eeefff;
-  `}
+
+  ${(props) =>
+    props.alternativeUI &&
+    css`
+      background-color: #eeefff;
+    `}
 `
 
 class StyledComponents extends Component {
-
   state = {
     titleColor: 'grey',
   }
 
   changeTitleColor = () => {
-    if(window.confirm('you sure?')){
+    if (window.confirm('you sure?')) {
       const rgbR = Math.floor(Math.random() * 255)
       const rgbG = Math.floor(Math.random() * 255)
       const rgbB = Math.floor(Math.random() * 255)
       const newColor = `rgb( ${rgbR}, ${rgbG}, ${rgbB} )`
       this.setState({
-        titleColor: newColor
+        titleColor: newColor,
       })
     }
   }
@@ -47,21 +48,12 @@ class StyledComponents extends Component {
     return (
       <Fragment>
         <h1>Styled Components</h1>
-        <StyledButton
-          onClick={this.changeTitleColor}
-        >
-          Change colors
-        </StyledButton>
-        <Card
-          passState={this.state}
-        >
+        <StyledButton onClick={this.changeTitleColor}>Change colors</StyledButton>
+        <Card passState={this.state}>
           <h4>Card 1 title</h4>
           <p>Description text</p>
         </Card>
-        <Card
-          passState={this.state}
-          alternativeUI
-        >
+        <Card passState={this.state} alternativeUI>
           <h4>Card 2 title</h4>
           <p>Description text</p>
         </Card>

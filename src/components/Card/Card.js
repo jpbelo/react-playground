@@ -8,12 +8,14 @@ const CardContainer = styled.div`
   ${width};
   border-radius: 6px;
   padding: 10px;
-  color: ${props => props.theme.colors.grey.main};
-  background-color: ${props => props.theme.colors.primary.bg};
+  color: ${(props) => props.theme.colors.grey.main};
+  background-color: ${(props) => props.theme.colors.primary.bg};
 
-  ${props => props.secondary && css`
-    background-color: ${props => props.theme.colors.secondary.bg};
-  `}
+  ${(props) =>
+    props.secondary &&
+    css`
+      background-color: ${(props) => props.theme.colors.secondary.bg};
+    `}
 `
 
 class Card extends Component {
