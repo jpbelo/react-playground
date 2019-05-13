@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const StyledReduxLog= styled.button`
   position: absolute;
   z-index: 2;
-  top: 5px;
+  bottom: 5px;
   right: 5px;
   width: 180px;
   max-height: calc(100vh - 230px);
