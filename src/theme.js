@@ -15,12 +15,8 @@
 export default {
   name: 'default',
   // breakpoints,
-  space: [
-    0, 4, 8, 16, 32, 64, 128, 256, 512
-  ],
-  fontSizes: [
-    8, 13, 21, 34, 55
-  ],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fontSizes: [8, 13, 21, 34, 55],
   colors: {
     primary: {
       main: 'hsl(80,100%,50%)',

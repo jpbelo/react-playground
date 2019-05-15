@@ -8,7 +8,7 @@ import { StyledButton } from '../Button'
 const StyledAnchorLink = styled(Link)`
   ${width};
   text-decoration: underline;
-  color: ${props => props.secondary ? props.theme.colors.secondary.dark : props.theme.colors.primary.dark};
+  color: ${(props) => (props.secondary ? props.theme.colors.secondary.dark : props.theme.colors.primary.dark)};
 `
 
 class AnchorLink extends Component {
@@ -16,18 +16,14 @@ class AnchorLink extends Component {
     const passProps = {}
     passProps.to = this.props.to
 
-    if( this.props.showAsButton ){
+    if (this.props.showAsButton) {
       return (
-        <StyledButton {...passProps} as={Link} >
+        <StyledButton {...passProps} as={Link}>
           {this.props.children}
         </StyledButton>
       )
     } else {
-      return (
-        <StyledAnchorLink {...passProps} >
-          {this.props.children}
-        </StyledAnchorLink>
-      )
+      return <StyledAnchorLink {...passProps}>{this.props.children}</StyledAnchorLink>
     }
   }
 }

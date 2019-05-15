@@ -10,24 +10,17 @@ const StyledForm = styled.form`
   background-color: #ddd;
 `
 
-const LoginForm = props => {
+const LoginForm = (props) => {
   const { error, handleSubmit, pristine, reset, submitting } = props
   return (
     <StyledForm onSubmit={handleSubmit(submit)}>
-      <Field
-        name="username"
-        component={TextInput}
-        label="Username"
-        placeholder="my_user_name"
-      />
-      <Field
-        name="password"
-        component={PasswordInput}
-        label="Password"
-      />
-      <br/><br/>
-        {error && <strong>{error}</strong>}
-      <br/><br/>
+      <Field name="username" component={TextInput} label="Username" placeholder="my_user_name" />
+      <Field name="password" component={PasswordInput} label="Password" />
+      <br />
+      <br />
+      {error && <strong>{error}</strong>}
+      <br />
+      <br />
       <SubmitInput disabled={pristine || submitting} type="submit">
         Send
       </SubmitInput>
@@ -41,5 +34,5 @@ const LoginForm = props => {
 }
 
 export default reduxForm({
-	form: 'loginForm'
+  form: 'loginForm',
 })(LoginForm)
