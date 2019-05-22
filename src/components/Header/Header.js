@@ -18,11 +18,10 @@ const Navigation = styled.div`
     width: 50px;
   }
   & > ul {
-
     & > li {
       & > a {
         display: inline-block;
-        color: black; 
+        color: black;
         padding: 10px 0;
       }
     }
