@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-const StyledReduxLog= styled.button`
+const StyledReduxLog = styled.button`
   position: absolute;
   z-index: 2;
   bottom: 5px;
@@ -28,9 +28,9 @@ class ReduxLog extends Component {
   }
 }
 
-const mapStateToProps = function(state){
+const mapStateToProps = function(state) {
   return {
-    reduxState: state
+    reduxState: state,
   }
 }
 

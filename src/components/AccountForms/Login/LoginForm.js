@@ -10,7 +10,7 @@ const StyledForm = styled.form`
   background-color: #ddd;
 `
 
-const LoginForm = (props) => {
+const LoginForm = props => {
   const { error, handleSubmit, pristine, reset, submitting } = props
   return (
     <StyledForm onSubmit={handleSubmit(submit)}>
@@ -27,8 +27,12 @@ const LoginForm = (props) => {
       <SubmitInput disabled={pristine || submitting} onClick={reset}>
         Clear
       </SubmitInput>
-      <br/>
-      <p>username: dev<br/>password: reduxform</p>
+      <br />
+      <p>
+        username: dev
+        <br />
+        password: reduxform
+      </p>
     </StyledForm>
   )
 }
