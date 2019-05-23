@@ -5,11 +5,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 4000",
     "storybook:ci": "start-storybook --ci -p 4000",
-    "storybook:build": "build-storybook -c .storybook -o .out"
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "pretty": "prettier --write 'src/**/*.js'",
+    "pretty:check": "prettier --check 'src/**/*.js'",
+    "generate": "generact"
   },
   "dependencies": {
     "lodash": "^4.17.11",
@@ -39,8 +42,22 @@
     "@babel/core": "^7.4.3",
     "@storybook/react": "^5.0.10",
     "babel-loader": "^8.0.5",
+    "generact": "^0.4.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.17.0",
     "storybook-addon-jsx": "^7.1.0",
     "storybook-addon-styled-component-theme": "^1.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
