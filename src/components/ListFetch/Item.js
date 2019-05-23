@@ -10,9 +10,13 @@ class Item extends React.Component {
   render() {
     return (
       <Character>
-        <p>Name: {this.props.name}<br/>
-        Height: {this.props.height}<br/>
-        Hair color: {this.props.hair_color}</p>
+        <p>
+          Name: {this.props.name}
+          <br />
+          Height: {this.props.height}
+          <br />
+          Hair color: {this.props.hair_color}
+        </p>
       </Character>
     )
   }

@@ -8,7 +8,7 @@ import { StyledButton } from '../Button'
 const StyledAnchorLink = styled(Link)`
   ${width};
   text-decoration: underline;
-  color: ${(props) => (props.secondary ? props.theme.colors.secondary.dark : props.theme.colors.primary.dark)};
+  color: ${props => (props.secondary ? props.theme.colors.secondary.dark : props.theme.colors.primary.dark)};
 `
 
 class AnchorLink extends Component {

@@ -7,7 +7,7 @@ import { logout_user } from '../../../actions'
 
 class AccountLinks extends Component {
   render() {
-    const {logout_user, username, isLoggedIn} = this.props
+    const { logout_user, username, isLoggedIn } = this.props
     return (
       <Fragment>
         {isLoggedIn ? (
@@ -35,5 +35,5 @@ const mapDispatchToProps = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(AccountLinks)

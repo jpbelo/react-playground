@@ -5,7 +5,7 @@ export const login_user = username => ({
   type: LOGIN_USER,
   payload: {
     username,
-  }
+  },
 })
 
 export const logout_user = () => ({

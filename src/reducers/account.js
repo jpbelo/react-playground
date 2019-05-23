@@ -9,7 +9,7 @@ const account = (state = accountIS, { type, payload }) => {
       return {
         ...state,
         username: payload.username,
-        isLoggedIn: true
+        isLoggedIn: true,
       }
     case 'LOGOUT_USER':
       return {

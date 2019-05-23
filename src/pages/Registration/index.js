@@ -6,7 +6,7 @@ class RegistrationPage extends Component {
     return (
       <Fragment>
         <h1>Registration</h1>
-        <RegistrationForm/>
+        <RegistrationForm />
       </Fragment>
     )
   }

@@ -7,7 +7,9 @@ class List extends React.Component {
     return (
       <Fragment>
         <h3>{this.props.people.length} results</h3>
-        {this.props.people.map(person => <Item {...person} />)}
+        {this.props.people.map(person => (
+          <Item {...person} />
+        ))}
       </Fragment>
     )
   }

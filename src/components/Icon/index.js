@@ -8,31 +8,35 @@ const IconContainer = styled.div`
   width: ${props => props.theme.sizeX * props.size}px;
   height: ${props => props.theme.sizeX * props.size}px;
 
-  ${props => props.color && css`
-    path, polygon, rect {
-      fill: ${props => props.color};
-    }
-    circle {
-      stroke: ${props => props.color};
-      stroke-width: 1;
-    }
-  `}
+  ${props =>
+    props.color &&
+    css`
+      path,
+      polygon,
+      rect {
+        fill: ${props => props.color};
+      }
+      circle {
+        stroke: ${props => props.color};
+        stroke-width: 1;
+      }
+    `}
 `
 
 class Icon extends Component {
   render() {
     const SpecificIcon = icons[this.props.name]
     let iconColor
-    if( this.props.primary ){
+    if (this.props.primary) {
       iconColor = this.props.theme.colors.primary.main
-    } else if( this.props.secondary ){
+    } else if (this.props.secondary) {
       iconColor = this.props.theme.colors.secondary.main
     } else {
       iconColor = this.props.theme.colors.grey.main
     }
 
     let iconSize = 2
-    if( this.props.size ){
+    if (this.props.size) {
       iconSize = this.props.size
     }
 

@@ -24,18 +24,14 @@ class SelectInput extends Component {
       <UID>
         {id => (
           <Fragment>
-            {this.props.inputProps.label && (
-              <Label for={id}>
-                {this.props.inputProps.label}
-              </Label>
-            )}
+            {this.props.inputProps.label && <Label for={id}>{this.props.inputProps.label}</Label>}
             <StyledSelectInput
               id={id}
               style={{
-              	backgroundImage: dataUri,
+                backgroundImage: dataUri,
               }}
             >
-              {this.props.inputProps.options.map( option => (
+              {this.props.inputProps.options.map(option => (
                 <option value={option.value}>{option.text}</option>
               ))}
             </StyledSelectInput>
