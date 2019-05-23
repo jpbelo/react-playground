@@ -20,19 +20,9 @@ const TextInput = ({ placeholder, input, label, type, meta: { touched, error } }
   <UID>
     {id => (
       <Fragment>
-        {label && (
-          <Label htmlFor={id}>
-            {label}
-          </Label>
-        )}
-        <StyledTextInput
-          {...input}
-          id={id}
-          type="text"
-          placeholder={placeholder && placeholder}
-        />
-        {touched && error &&
-        <span className="error">{error}</span>}
+        {label && <Label htmlFor={id}>{label}</Label>}
+        <StyledTextInput {...input} id={id} type="text" placeholder={placeholder && placeholder} />
+        {touched && error && <span className="error">{error}</span>}
       </Fragment>
     )}
   </UID>

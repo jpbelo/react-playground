@@ -16,23 +16,13 @@ const StyledPasswordInput = styled.input`
   }
 `
 
-const PasswordInput = (field) => (
+const PasswordInput = field => (
   <UID>
     {id => (
       <Fragment>
-        {field.label && (
-          <Label htmlFor={id}>
-            {field.label}
-          </Label>
-        )}
-        <StyledPasswordInput
-          {...field.input}
-          id={id}
-          type="password"
-          placeholder={field.placeholder && field.placeholder}
-        />
-        {field.meta.touched && field.meta.error &&
-        <span className="error">{field.meta.error}</span>}
+        {field.label && <Label htmlFor={id}>{field.label}</Label>}
+        <StyledPasswordInput {...field.input} id={id} type="password" placeholder={field.placeholder && field.placeholder} />
+        {field.meta.touched && field.meta.error && <span className="error">{field.meta.error}</span>}
       </Fragment>
     )}
   </UID>

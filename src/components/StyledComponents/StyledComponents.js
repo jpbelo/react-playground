@@ -14,13 +14,13 @@ const Card = styled.div`
 
   h4 {
     font-size: 20px;
-    color: ${(props) => props.passState.titleColor};
+    color: ${props => props.passState.titleColor};
   }
   p {
     font-size: 14px;
   }
 
-  ${(props) =>
+  ${props =>
     props.alternativeUI &&
     css`
       background-color: #eeefff;

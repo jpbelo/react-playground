@@ -6,11 +6,11 @@ const Container = styled.div`
   height: calc(100vh - 220px);
   display: flex;
   justify-content: space-between;
-  &>div {
+  & > div {
     border: 1px dashed #ccc;
     width: calc(100% - 150px);
     overflow: scroll;
-    &>div {
+    & > div {
       width: 100%;
     }
   }
@@ -18,11 +18,7 @@ const Container = styled.div`
 
 class Layout extends Component {
   render() {
-    return (
-      <Container>
-        {this.props.children}
-      </Container>
-    )
+    return <Container>{this.props.children}</Container>
   }
 }
 
